@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Suriya Palanivel – MLOps Grand Line Architect. One Piece–inspired portfolio showcasing scalable ML pipelines on GCP, Kubeflow, Vertex AI, and GenAI solutions.">
+    <title>Suriya Palanivel | MLOps Grand Line Architect ☠️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- ===== OCEAN WAVES CANVAS ===== -->
+    <canvas id="oceanCanvas"></canvas>
+
+    <!-- ===== PARCHMENT OVERLAY ===== -->
+    <div class="parchment-overlay"></div>
+
+    <!-- ===== NAVBAR (Log Pose Navigation) ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <span class="logo-skull">☠️</span>
+                <span class="logo-text">SP</span>
+                <span class="logo-flag">Grand Line</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-island="1">About</a></li>
+                <li><a href="#experience" data-island="2">Voyage Log</a></li>
+                <li><a href="#skills" data-island="3">Devil Fruits</a></li>
+                <li><a href="#education" data-island="4">Training Arc</a></li>
+                <li><a href="#contact" data-island="5">Den Den Mushi</a></li>
+            </ul>
+            <!-- Log Pose indicator -->
+            <div class="log-pose" id="logPose">
+                <div class="log-pose-needle" id="logPoseNeedle"></div>
+                <div class="log-pose-ring"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO — WANTED POSTER ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-ocean-bg">
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="wanted-poster" id="wantedPoster">
+                <!-- Weathered paper marks -->
+                <div class="poster-scratch scratch-1"></div>
+                <div class="poster-scratch scratch-2"></div>
+                <div class="poster-scratch scratch-3"></div>
+                <div class="poster-corner corner-tl"></div>
+                <div class="poster-corner corner-tr"></div>
+                <div class="poster-corner corner-bl"></div>
+                <div class="poster-corner corner-br"></div>
+
+                <div class="wanted-header">WANTED</div>
+
+                <div class="wanted-photo">
+                    <div class="wanted-photo-inner">
+                        <img src="unnamed.jpg" alt="Suriya Palanivel" class="wanted-img" />
+                    </div>
+                </div>
+
+                <div class="wanted-dead-or-alive">DEAD OR ALIVE</div>
+
+                <h1 class="wanted-name">SURIYA · D · PALANIVEL</h1>
+
+                <div class="wanted-title-wrapper">
+                    <span class="wanted-title-typed" id="typedText"></span>
+                    <span class="cursor">|</span>
+                </div>
+
+                <div class="wanted-bounty">
+                    <span class="bounty-amount" id="bountyAmount">฿ 0</span>
+                    <span class="bounty-dash">-</span>
+                </div>
+
+                <div class="wanted-fine-print">
+                    ARCHITECTING SECURE SCALABLE ML PIPELINES ON GCP<br>
+                    AUTOMATING CI/CD/CT · BUILDING GENAI SOLUTIONS
+                </div>
+
+                <div class="wanted-stamp">MARINE</div>
+            </div>
+
+            <div class="hero-cta reveal">
+                <a href="https://linkedin.com/in/suriya-palanivel" target="_blank" class="btn btn-pirate"
+                    id="linkedin-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    Join My Crew
+                </a>
+                <a href="mailto:suriya131198@gmail.com" class="btn btn-marine" id="email-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    Send Den Den Mushi
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="compass-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="12,2 15,10 12,8 9,10" fill="currentColor" opacity="0.7" />
+                    <polygon points="12,22 9,14 12,16 15,14" fill="currentColor" opacity="0.3" />
+                </svg>
+            </div>
+            <p>Set Sail ↓</p>
+        </div>
+    </section>
+
+    <!-- ===== MAP ROUTE DIVIDER ===== -->
+    <div class="map-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path class="map-route" d="M0,30 Q100,10 200,30 T400,25 T600,35 T800,20 T1000,30 T1200,28"
+                stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="8 6" />
+            <circle class="map-island" cx="200" cy="30" r="5" fill="currentColor" opacity="0.4" />
+            <circle class="map-island" cx="500" cy="28" r="4" fill="currentColor" opacity="0.3" />
+            <circle class="map-island" cx="800" cy="24" r="6" fill="currentColor" opacity="0.4" />
+            <circle class="map-island" cx="1050" cy="30" r="4" fill="currentColor" opacity="0.3" />
+        </svg>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="section-bg-emblem">⚓</div>
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-icon">⚓</span>
+                Captain's Log
+            </h2>
+            <p class="section-subtitle reveal">The story of a nakama on the Grand Line of Machine Learning</p>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <div class="op-card">
+                        <div class="op-card-header">
+                            <span class="card-flag">🏴‍☠️</span>
+                            <span class="card-label">CREW PROFILE</span>
+                        </div>
+                        <p>Results-oriented <strong>MLOps Engineer</strong> at Tata Consultancy Services with <strong>4+
+                                years</strong> of experience navigating the treacherous waters of Agile/Scrum. I
+                            specialize in charting
+                            secure, scalable ML pipelines on <strong>GCP</strong> using <strong>Kubeflow (KFP)</strong>
+                            and <strong>Vertex AI</strong>.</p>
+                        <p>My voyage log includes automating <strong>CI/CD/CT</strong> workflows via Bitbucket
+                            Pipelines, enforcing cloud governance through IAM and Secret Manager, and optimizing cloud
+                            infrastructure for Machine Learning workloads. I also prototype <strong>Generative
+                                AI</strong> and <strong>LLM-based</strong> applications using HuggingFace and LangChain.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card op-card">
+                        <span class="stat-emblem">⚡</span>
+                        <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Years at Sea</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="--fill: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card op-card">
+                        <span class="stat-emblem">🚀</span>
+                        <span class="stat-number" data-target="30">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Pipeline Speedup</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="--fill: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card op-card">
+                        <span class="stat-emblem">💰</span>
+                        <span class="stat-number" data-target="15">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Beri Saved</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="--fill: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card op-card">
+                        <span class="stat-emblem">⚙️</span>
+                        <span class="stat-number" data-target="40">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Automation Gain</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="--fill: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP DIVIDER ===== -->
+    <div class="map-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path class="map-route" d="M0,35 Q150,10 300,32 T600,22 T900,38 T1200,25" stroke="currentColor"
+                stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="8 6" />
+            <circle class="map-island" cx="300" cy="32" r="5" fill="currentColor" opacity="0.4" />
+            <circle class="map-island" cx="700" cy="28" r="4" fill="currentColor" opacity="0.3" />
+            <circle class="map-island" cx="1000" cy="32" r="5" fill="currentColor" opacity="0.4" />
+        </svg>
+    </div>
+
+    <!-- ===== EXPERIENCE (Voyage Log) ===== -->
+    <section class="section experience" id="experience">
+        <div class="section-bg-emblem">🧭</div>
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-icon">🧭</span>
+                Voyage Log
+            </h2>
+            <p class="section-subtitle reveal">Islands conquered on the Grand Line</p>
+
+            <div class="timeline">
+                <!-- Role 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot">
+                        <span class="dot-island">🏝️</span>
+                    </div>
+                    <div class="timeline-content op-card">
+                        <div class="op-card-header">
+                            <span class="card-flag">🏴‍☠️</span>
+                            <span class="card-label">CURRENT ISLAND</span>
+                        </div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>MLOps Engineer</h3>
+                                <p class="company">Tata Consultancy Services</p>
+                            </div>
+                            <span class="timeline-date">Apr 2021 – Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Architect end-to-end ML pipelines on <strong>GCP Vertex AI</strong>, optimizing Kubeflow
+                                execution via KFP caching and parallel task execution, reducing total pipeline runtime
+                                by <strong>30%</strong>.</li>
+                            <li>Implemented automated retraining triggers using <strong>Vertex AI Model
+                                    Monitoring</strong> to detect and mitigate feature drift in real-time.</li>
+                            <li>Managed <strong>GCE instances</strong> for distributed ML workloads, reducing training
+                                costs by <strong>15%</strong> through strategic resource allocation.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Vertex AI</span>
+                            <span class="tag">Kubeflow</span>
+                            <span class="tag">GCP</span>
+                            <span class="tag">Model Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot">
+                        <span class="dot-island">⛵</span>
+                    </div>
+                    <div class="timeline-content op-card">
+                        <div class="op-card-header">
+                            <span class="card-flag">🔬</span>
+                            <span class="card-label">INNOVATION ISLAND</span>
+                        </div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>ML / GenAI Developer</h3>
+                                <p class="company">Innovation Team – TCS</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Prototyped <strong>Generative AI</strong> solutions and LLM-based applications in an
+                                Agile setting using Python, <strong>HuggingFace</strong>, and
+                                <strong>LangChain</strong>.
+                            </li>
+                            <li>Orchestrated experimental workflows on GCP, utilizing <strong>Docker</strong> to ensure
+                                environment parity and version control for model artifacts.</li>
+                            <li>Collaborated with cross-functional teams to deliver rapid proof-of-concepts,
+                                transitioning successful prototypes to the MLOps production track.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">LangChain</span>
+                            <span class="tag">HuggingFace</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot">
+                        <span class="dot-island">🗺️</span>
+                    </div>
+                    <div class="timeline-content op-card">
+                        <div class="op-card-header">
+                            <span class="card-flag">📊</span>
+                            <span class="card-label">DATA ISLAND</span>
+                        </div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Analyst & FastAPI Developer</h3>
+                                <p class="company">TCS</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Conducted <strong>Exploratory Data Analysis (EDA)</strong> and statistical validation to
+                                ensure data integrity and feature relevance prior to model training.</li>
+                            <li>Developed and deployed <strong>FastAPI</strong> wrappers to serve ML models as
+                                high-concurrency production-grade REST APIs.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">EDA</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot">
+                        <span class="dot-island">🔧</span>
+                    </div>
+                    <div class="timeline-content op-card">
+                        <div class="op-card-header">
+                            <span class="card-flag">⚙️</span>
+                            <span class="card-label">STARTING ISLAND</span>
+                        </div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Automation Script Developer</h3>
+                                <p class="company">TCS</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Authored automated testing scripts using <strong>Katalon Studio</strong> and
+                                <strong>Groovy</strong>, reducing manual verification effort by <strong>40%</strong>.
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Katalon Studio</span>
+                            <span class="tag">Groovy</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP DIVIDER ===== -->
+    <div class="map-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path class="map-route" d="M0,28 Q200,48 400,25 T800,35 T1200,30" stroke="currentColor" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-dasharray="8 6" />
+            <circle class="map-island" cx="350" cy="28" r="5" fill="currentColor" opacity="0.4" />
+            <circle class="map-island" cx="750" cy="32" r="4" fill="currentColor" opacity="0.3" />
+        </svg>
+    </div>
+
+    <!-- ===== SKILLS (Devil Fruits & Haki) ===== -->
+    <section class="section skills" id="skills">
+        <div class="section-bg-emblem">🍎</div>
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-icon">🍎</span>
+                Powers & Abilities
+            </h2>
+            <p class="section-subtitle reveal">Devil Fruits consumed and Haki mastered on the Grand Line</p>
+            <div class="skills-grid">
+                <!-- Logia — Cloud Infrastructure -->
+                <div class="skill-category op-card reveal" data-fruit="logia">
+                    <div class="op-card-header">
+                        <span class="card-flag">🌩️</span>
+                        <span class="card-label fruit-type logia-badge">LOGIA TYPE</span>
+                    </div>
+                    <div class="skill-category-header">
+                        <div class="fruit-icon logia-icon">☁️</div>
+                        <div>
+                            <h3>Cloud & MLOps</h3>
+                            <p class="fruit-desc">Intangible infrastructure that flows like an element</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-chip logia-chip">Vertex AI</span>
+                        <span class="skill-chip logia-chip">GCS</span>
+                        <span class="skill-chip logia-chip">Secret Manager</span>
+                        <span class="skill-chip logia-chip">IAM</span>
+                        <span class="skill-chip logia-chip">Kubeflow (KFP)</span>
+                        <span class="skill-chip logia-chip">Bitbucket Pipelines</span>
+                        <span class="skill-chip logia-chip">Docker</span>
+                        <span class="skill-chip logia-chip">Kubernetes</span>
+                    </div>
+                </div>
+
+                <!-- Paramecia — Frameworks & Libraries -->
+                <div class="skill-category op-card reveal" data-fruit="paramecia">
+                    <div class="op-card-header">
+                        <span class="card-flag">🔮</span>
+                        <span class="card-label fruit-type paramecia-badge">PARAMECIA TYPE</span>
+                    </div>
+                    <div class="skill-category-header">
+                        <div class="fruit-icon paramecia-icon">🧠</div>
+                        <div>
+                            <h3>Frameworks & Libraries</h3>
+                            <p class="fruit-desc">Superhuman abilities that reshape reality</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-chip paramecia-chip">FastAPI</span>
+                        <span class="skill-chip paramecia-chip">Scikit-learn</span>
+                        <span class="skill-chip paramecia-chip">Transformers</span>
+                        <span class="skill-chip paramecia-chip">TensorFlow</span>
+                        <span class="skill-chip paramecia-chip">LangChain</span>
+                        <span class="skill-chip paramecia-chip">Pandas</span>
+                        <span class="skill-chip paramecia-chip">NumPy</span>
+                    </div>
+                </div>
+
+                <!-- Haki — Automation & DevOps -->
+                <div class="skill-category op-card reveal" data-fruit="haki">
+                    <div class="op-card-header">
+                        <span class="card-flag">👊</span>
+                        <span class="card-label fruit-type haki-badge">HAKI</span>
+                    </div>
+                    <div class="skill-category-header">
+                        <div class="fruit-icon haki-icon">⚡</div>
+                        <div>
+                            <h3>Automation & DevOps</h3>
+                            <p class="fruit-desc">Willpower-driven mastery that transcends tools</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-chip haki-chip">YAML</span>
+                        <span class="skill-chip haki-chip">Shell Scripting</span>
+                        <span class="skill-chip haki-chip">Git</span>
+                        <span class="skill-chip haki-chip">Jira (Agile/Scrum)</span>
+                        <span class="skill-chip haki-chip">CI/CD/CT</span>
+                        <span class="skill-chip haki-chip">Groovy</span>
+                    </div>
+                </div>
+
+                <!-- Zoan — Core Competencies -->
+                <div class="skill-category op-card reveal" data-fruit="zoan">
+                    <div class="op-card-header">
+                        <span class="card-flag">🐉</span>
+                        <span class="card-label fruit-type zoan-badge">ZOAN TYPE</span>
+                    </div>
+                    <div class="skill-category-header">
+                        <div class="fruit-icon zoan-icon">🎯</div>
+                        <div>
+                            <h3>Core Competencies</h3>
+                            <p class="fruit-desc">Adaptive transformations for any battle</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-chip zoan-chip">Model Drift Monitoring</span>
+                        <span class="skill-chip zoan-chip">Parallel Ops</span>
+                        <span class="skill-chip zoan-chip">Caching</span>
+                        <span class="skill-chip zoan-chip">EDA</span>
+                        <span class="skill-chip zoan-chip">Statistical Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP DIVIDER ===== -->
+    <div class="map-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path class="map-route" d="M0,30 Q300,10 600,35 T1200,28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-dasharray="8 6" />
+            <circle class="map-island" cx="400" cy="22" r="5" fill="currentColor" opacity="0.4" />
+            <circle class="map-island" cx="900" cy="30" r="4" fill="currentColor" opacity="0.3" />
+        </svg>
+    </div>
+
+    <!-- ===== EDUCATION (Training Arc) ===== -->
+    <section class="section education" id="education">
+        <div class="section-bg-emblem">📚</div>
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-icon">⚔️</span>
+                Training Arc
+            </h2>
+            <p class="section-subtitle reveal">Where the foundations of power were forged</p>
+            <div class="education-grid">
+                <div class="edu-card op-card reveal">
+                    <div class="op-card-header">
+                        <span class="card-flag">🎓</span>
+                        <span class="card-label">RAFTEL ACADEMY</span>
+                    </div>
+                    <div class="edu-emblem">📜</div>
+                    <h3>MBA in Data Science</h3>
+                    <p class="edu-school">Jain (Deemed-to-be University)</p>
+                    <p class="edu-meta">
+                        <span>📍 Bangalore, India</span>
+                        <span>⏳ 2022 – 2024</span>
+                    </p>
+                </div>
+                <div class="edu-card op-card reveal">
+                    <div class="op-card-header">
+                        <span class="card-flag">🎓</span>
+                        <span class="card-label">EAST BLUE DOJO</span>
+                    </div>
+                    <div class="edu-emblem">⚔️</div>
+                    <h3>BE in Computer Science & Engineering</h3>
+                    <p class="edu-school">K. Ramakrishnan College of Engineering</p>
+                    <p class="edu-meta">
+                        <span>📍 Trichy, India</span>
+                        <span>⏳ 2016 – 2020</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP DIVIDER ===== -->
+    <div class="map-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path class="map-route" d="M0,25 Q200,45 500,28 T1000,35 T1200,30" stroke="currentColor" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-dasharray="8 6" />
+        </svg>
+    </div>
+
+    <!-- ===== CONTACT (Den Den Mushi) ===== -->
+    <section class="section contact" id="contact">
+        <div class="section-bg-emblem">📞</div>
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-icon">🐌</span>
+                Den Den Mushi
+            </h2>
+            <p class="section-subtitle contact-subtitle reveal">Buru buru buru… Kacha! Ready to connect, nakama?</p>
+            <div class="contact-grid">
+                <div class="contact-cards reveal">
+                    <a href="mailto:suriya131198@gmail.com" class="contact-card op-card" id="contact-email">
+                        <div class="contact-emblem">✉️</div>
+                        <h4>Mail Coo</h4>
+                        <p>suriya131198@gmail.com</p>
+                    </a>
+                    <a href="tel:+918903854978" class="contact-card op-card" id="contact-phone">
+                        <div class="contact-emblem">🐌</div>
+                        <h4>Den Den Mushi</h4>
+                        <p>(+91) 89038-54978</p>
+                    </a>
+                    <a href="https://linkedin.com/in/suriya-palanivel" target="_blank" class="contact-card op-card"
+                        id="contact-linkedin">
+                        <div class="contact-emblem">🤝</div>
+                        <h4>Alliance</h4>
+                        <p>suriya-palanivel</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">
+                    <span class="footer-skull">☠️</span>
+                    SP — Grand Line Crew
+                </p>
+                <p>&copy; 2026 Suriya Palanivel. The adventure continues!</p>
+                <p class="footer-quote">"A man's dream never dies!" — Marshall D. Teach</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
